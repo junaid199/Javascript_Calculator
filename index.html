@@ -20,7 +20,7 @@
         <button type="submit" onclick="doProduct(); return false">Product</button>
         <button type="submit" onclick="doDivide(); return false">Divide</button>
         <button type="submit" onclick="doModulus(); return false">Remainder</button>
-        <button type="submit" onclick="doPercent(); return false">Remainder</button>
+        <button type="submit" onclick="doPercent(); return false">Percentage</button>
     </form>
         <h2 id = "result"></h2>
 
@@ -100,8 +100,22 @@
             
             document.querySelector("#result").innerHTML=result1;
         }
+        function doPercent(){
 
-        
+let num1=document.querySelector("#num1").value
+           let num2=document.querySelector("#num2").value
+
+           num1= Number (num1);
+           num2=Number (num2);
+
+           console.log("num1", num1);
+           console.log("num2", num2);
+           
+           let result1= (num1 / num2)*100;
+           
+           document.querySelector("#result").innerHTML=result1;
+       }
+
     </script>
 </body>
 
